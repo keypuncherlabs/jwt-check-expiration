@@ -1,6 +1,6 @@
 {
   "name": "jwt-check-expiration",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Check to see if a token is expired using only the token itself without a secret key or validation",
   "main": "src/index.js",
   "scripts": {
@@ -25,5 +25,8 @@
     "expired"
   ],
   "author": "Charles Markovich",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jwt-decode": "^2.2.0"
+  }
 }

@@ -5,12 +5,18 @@
  * @public
  */
 
-const isExpired = (token) => {
+var jwtDecode = require('jwt-decode');
+
+const isJwtExpired = (token) => {
   if (typeof(token) !== 'string' || !token) throw new Error('Invalid token provided');
 
-  const isExired = false;
+  let isJwtExpired = false;
+  const { exp } = jwtDecode(token);
+  const currentTime = new Date().getTime() / 1000;
 
-  return isExired;
+  if (currentTime > exp) isJwtExpired = true;
+
+  return isJwtExpired;
 }
 
-module.exports.isExpired = isExpired;
+module.exports.isJwtExpired = isJwtExpired;
