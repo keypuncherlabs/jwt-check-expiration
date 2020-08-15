@@ -1,6 +1,6 @@
 {
   "name": "jwt-check-expiration",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Check to see if a token is expired using only the token itself without a secret key or validation",
   "main": "src/index.js",
   "scripts": {
@@ -28,5 +28,9 @@
   "license": "MIT",
   "dependencies": {
     "jwt-decode": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/star-scraper/jwt-check-expiration"
   }
 }
